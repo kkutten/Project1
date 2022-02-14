@@ -10,14 +10,13 @@ These files have been tested and used to generate a live ELK deployment on Azure
   - [Metricbeat Playbook](https://github.com/kkutten/Project1/blob/main/Ansible/Metricbeat_Install-Playbook.yml)
   - [ELK Playbook](https://github.com/kkutten/Project1/blob/main/Ansible/Elk-Playbook.yml)
 
-This document contains the following details:
-- Description of the Topologu
-- Access Policies
-- ELK Configuration
-  - Beats in Use
-  - Machines Being Monitored
-- How to Use the Ansible Build
-
+			This document contains the following details:
+ 				- Description of the Topology
+				- Access Policies
+				- ELK Configuration
+  				- Beats in Use
+  				- Machines Being Monitored
+				- How to Use the Ansible Build
 
 ### Description of the Topology
 
