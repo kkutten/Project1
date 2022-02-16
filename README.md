@@ -1,6 +1,4 @@
 ## Automated ELK Stack Deployment
-
-The files in this repository were used to configure the network depicted below.
   
 ![](https://github.com/kkutten/Project1/blob/main/Diagram/PROJECT%201%20NETWORK%20DIAGRAM.png)
 
@@ -78,7 +76,7 @@ The following screenshot displays the result of running `docker ps` after succes
 **Note**: The following image link needs to be updated. Replace `docker_ps_output.png` with the name of your screenshot image file.  
 
 
-![Docker ps]https://github.com/kkutten/Project1/issues/1#issue-1139509169
+![Docker ps](https://github.com/kkutten/Project1/issues/1#issue-1139509169)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
