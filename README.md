@@ -1,32 +1,37 @@
 ## Automated ELK Stack Deployment
   
+The files in this repository were used to configure the network as depicted in the below diagram:
+
 ![](https://github.com/kkutten/Project1/blob/main/Diagram/PROJECT%201%20NETWORK%20DIAGRAM.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file(s) may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file(s) may be used to install only certain pieces of it, such as Filebeat. The individual playbooks may be found in the below links.
 
   - [Filebeat Playbook](https://github.com/kkutten/Project1/blob/main/Ansible/Filebeat_Install-Playbook.yml)
+  	- [Filebeat Config. File](https://github.com/kkutten/Project1/blob/main/Ansible/Filebeat_Configuration.yml)
   - [Metricbeat Playbook](https://github.com/kkutten/Project1/blob/main/Ansible/Metricbeat_Install-Playbook.yml)
+  	- [Metricbeat Config. File](https://github.com/kkutten/Project1/blob/main/Ansible/Metricbeat_Config.yml)
   - [ELK Playbook](https://github.com/kkutten/Project1/blob/main/Ansible/Elk-Playbook.yml)
 
-			This document contains the following details:
- 				- Description of the Topology
-				- Access Policies
-				- ELK Configuration
-  				- Beats in Use
-  				- Machines Being Monitored
-				- How to Use the Ansible Build
+**This document contains the following details**:
+
+- Description of the Topology
+- Access Policies
+- ELK Configuration
+- Beats in Use
+- Machines Being Monitored
+- How to Use the Ansible Build
 
 ### Description of the Topology
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly __effective___, in addition to restricting __Access___ to the network.
-- _TODO: What aspect of security do load balancers protect? They prevent unwanted or unauthorized traffic from reaching the application.
-- What is the advantage of a jump box?_They add a security layer to the web servers preventing them from being exposed to the public.
+Load balancing ensures that the application will be highly **effective**, in addition to restricting **Access** to the network.
 
+- Load Balancers prevent unwanted or unauthorized traffic from reaching the application as well as protecting against various attacks such as DDoS.
+- Jump Boxes can add an additional layer of security to the web server by preventing them from being exposed to the general public and only exposed to those with the 		  provided SSH Key Pair. Jump Boxes function as a secure comomputer for admins to connect to as a starting point, before conducting adminitrative tasks.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __configuration files__ and system __files___.
-- _TODO: What does Filebeat watch for?_They watch for Log files or log events
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the **configuration files** and system **files**.
+- **What does Filebeat watch for?** Filebeat is used to watch for Log files or log events.
 - _TODO: What does Metricbeat record?_They record Metrics from on going services on the server
 
 The configuration details of each machine may be found below.
