@@ -32,10 +32,9 @@ Load balancing ensures that the application will be highly **effective**, in add
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the **configuration files** and system **files**.
 - **What does Filebeat watch for?** Filebeat is used to watch for Log files or log events.
-- _TODO: What does Metricbeat record?_They record Metrics from on going services on the server
+- **What does Metricbeat record?** Metricbeat is used to recored Metrics from on going services on the server.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -49,39 +48,39 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the __Jump-box-Provisioner___ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 168.61.185.199
-- _TODO: Add whitelisted IP addresses_
+Only the **Jump-box-Provisioner** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 
 
-Machines within the network can only be accessed by _Jumpbox____.
-- _TODO: Which machine did you allow to access your ELK VM?  My personal computer
-- What was its IP address?_168.61.185.199
+- 168.61.185.199
+
+Machines within the network can only be accessed by** Jumpbox**.
+- **Which machine did you allow to access your ELK VM?**  
+  - JumpBox/Ansible Container (10.0.0.4)
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes                 | 10.0.0.1 10.0.0.2    |
-| Web-1    | No                  | 168.61.185.199       |
-| Web-2    | No                  | 168.61.185.199       |
-| Web-3	   | No		         | 168.61.185.199       |
-| VM-ELK   | Yes(http)           | 168.61.185.199       |
+| Name     | Publicly Accessible | Allowed IP Addresses                |
+|----------|---------------------|-------------------------------------|
+| Jump Box | Yes                 | 10.0.0.1 10.0.0.2 168.61.185.199    |
+| Web-1    | No                  | 10.0.0.4                            |
+| Web-2    | No                  | 10.0.0.4                            |
+| Web-3	   | No		               | 10.0.0.4                            |
+| VM-ELK   | Yes(http)           | 168.61.185.199                      |
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_It is flexible because it allows changes to be made within any of the VMs associated with it.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible is flexible because it allows changes to be made within any of the VMs associated with it and allows for configurations/deployments to be completed in an automated fashion which is more efficient.
 
-The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-1) Install Docker.io 2)Install python3-pip 3)Install Docker Python Module
-4) Download and launch a Docker web container 5)Download and launch a docker web container.
+**The playbook implements the following tasks:**
+
+1. Install Docker.io 
+2. Install python3-pip 
+3. Install Docker Python Module
+4. Increas Virtual Memory on host
+5. Download and launch a Docker web container 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-**Note**: The following image link needs to be updated. Replace `docker_ps_output.png` with the name of your screenshot image file.  
-
-
-![Docker ps]https://github.com/kkutten/Project1/issues/1#issue-1139509169
+![Docker ps](https://github.com/kkutten/Project1/issues/1#issue-1139509169)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
